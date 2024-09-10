@@ -1,0 +1,40 @@
+<div class="text-border">
+  <fieldset
+    style="
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    "
+  >
+    <legend>
+      @for(filler of [].constructor(amountOfTimesToRepeatBorderText); track
+      filler){
+      {{ textToDisplayAsBorder }} }
+    </legend>
+    @for (thing of arrayOfThingsToDisplayInTheMiddle; track thing) {
+    <span>{{ thing }}</span
+    >}
+  </fieldset>
+  <fieldset>
+    <legend>
+      @for(filler of [].constructor(amountOfTimesToRepeatBorderText); track
+      filler){
+      {{ textToDisplayAsBorder }} }
+    </legend>
+  </fieldset>
+  <fieldset>
+    <legend>
+      @for(filler of [].constructor(amountOfTimesToRepeatBorderText); track
+      filler){
+      {{ textToDisplayAsBorder }} }
+    </legend>
+  </fieldset>
+  <fieldset>
+    <legend>
+      @for(filler of [].constructor(amountOfTimesToRepeatBorderText); track
+      filler){
+      {{ textToDisplayAsBorder }} }
+    </legend>
+  </fieldset>
+</div>

@@ -1,0 +1,36 @@
+// fieldset test
+
+.text-border {
+  display: grid;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  background-color: #171717;
+}
+
+fieldset {
+  border: 10px solid transparent;
+  box-sizing: border-box;
+  grid-area: 1 / 1;
+  width: inherit;
+}
+fieldset:nth-of-type(1) {
+  background: content-box center/contain no-repeat;
+}
+fieldset:nth-of-type(2) {
+  transform: rotate(90deg);
+}
+fieldset:nth-of-type(3) {
+  transform: rotate(180deg);
+}
+fieldset:nth-of-type(4) {
+  transform: rotate(-90deg);
+}
+legend {
+  font: 15pt/0 "Averia Serif Libre";
+  margin: auto;
+  padding: 0 4px;
+}
+fieldset:nth-of-type(3) > legend {
+  transform: rotate(180deg);
+}

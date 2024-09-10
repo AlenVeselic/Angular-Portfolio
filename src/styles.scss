@@ -1,9 +1,47 @@
+// _custom.scss import
+
+@import "_custom.scss";
+
+// bootstrap import
+
+@import "bootstrap/scss/bootstrap";
+
 /* You can add global styles to this file, and also import other style files */
+
+body.regular {
+  background-color: rgb(23, 23, 23);
+  a.nav-link {
+    color: white;
+  }
+
+  .content {
+    p {
+      color: white;
+    }
+  }
+}
+
+body.greenish-yellow {
+  background-color: rgb(231, 236, 148);
+
+  .content {
+    p {
+      color: black;
+    }
+  }
+
+  a.nav-link {
+    color: black;
+  }
+}
+
+.navbar-toggler {
+  background-color: #00000046;
+}
 
 li {
   margin: 0 5px;
-  color: black;
-  mix-blend-mode: screen;
+  color: white;
 
   &:hover > .dropdownMenu {
     display: block;
@@ -25,12 +63,10 @@ li > a {
 .content {
   font-size: 14px;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-weight: 200;
 
-  min-height: 100vh;
   width: auto;
 }
 
@@ -57,12 +93,9 @@ li > a {
   }
 }
 
-.content:hover {
-  background-position: 200% 200%;
-}
-
 body {
   margin: 0;
+  transition: background-color 1s;
 }
 
 // Placeholder styles
@@ -123,9 +156,7 @@ main {
   width: 100%;
   min-height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 1rem;
   box-sizing: inherit;
   position: relative;
 }
@@ -136,7 +167,7 @@ main {
 
 .content {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   width: 100%;
   color: white;
   z-index: 5;
@@ -231,20 +262,6 @@ main {
   fill: var(--gray-900);
 }
 
-@media screen and (max-width: 650px) {
-  .content {
-    flex-direction: column;
-    width: max-content;
-  }
-
-  .divider {
-    height: 1px;
-    width: 100%;
-    background: var(--red-to-pink-to-purple-horizontal-gradient);
-    margin-block: 1.5rem;
-  }
-}
-
 body {
   display: flex;
   justify-content: center;
@@ -283,15 +300,13 @@ body {
   height: 100%;
 }
 body {
-  display: table;
   width: 100%;
   height: 100%;
   background-color: #171717;
   color: #000;
-  line-height: 1.6;
   position: relative;
   font-family: sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .lines {
   position: absolute;
@@ -452,4 +467,73 @@ body {
 
 .placeholder {
   width: 80vw;
+}
+
+/* Faux outline for older browsers */
+.outline {
+  color: white; /* Unfortunately you can't use transparent here … */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+/* Real outline for modern browsers */
+@supports ((text-stroke: 2px black) or (-webkit-text-stroke: 2px black)) {
+  .outline {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    text-stroke: 2px white;
+    text-shadow: none;
+  }
+}
+
+$duration: 20s;
+
+.wrapper {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee $duration linear infinite;
+
+  &.reverse {
+    animation: marquee-reverse $duration linear infinite;
+  }
+}
+
+.marquee p {
+  display: inline-block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.hero-banner-text {
+  font-size: 3rem;
+  overflow: hidden;
+}
+
+.libre-franklin {
+  font-family: "Libre Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
 }

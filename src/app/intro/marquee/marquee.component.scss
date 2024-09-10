@@ -1,0 +1,45 @@
+p {
+  position: relative;
+  bottom: -11px;
+  margin: 0;
+}
+
+$duration: 20s;
+
+.wrapper {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee $duration linear infinite;
+
+  &.reverse {
+    animation: marquee-reverse $duration linear infinite;
+  }
+}
+
+.marquee p {
+  display: inline-block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
