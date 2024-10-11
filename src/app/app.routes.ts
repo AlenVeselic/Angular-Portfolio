@@ -13,7 +13,7 @@ export const routes: Routes = [
     component: IntroComponent,
     data: {
       animation: 'HomePage',
-      bodyClass: 'regular',
+      bodyClass: 'blue-gradient',
       CVLinkClass: 'expose',
     },
   },

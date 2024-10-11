@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { BoxWithTextBorderComponent } from './box-with-text-border/box-with-text-border.component';
 import { MarqueeComponent } from './marquee/marquee.component';
-import { HeaderComponent } from '../header/header.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-intro',
   standalone: true,
-  imports: [BoxWithTextBorderComponent, MarqueeComponent],
+  imports: [BoxWithTextBorderComponent, MarqueeComponent, RouterLink],
   templateUrl: './intro.component.html',
   styleUrl: './intro.component.scss',
 })

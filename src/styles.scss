@@ -8,6 +8,23 @@
 
 /* You can add global styles to this file, and also import other style files */
 
+@property --gradient-degree {
+  syntax: "<angle>";
+  initial-value: 45deg;
+  inherits: false;
+}
+
+@property --gradien-middle-percentage {
+  syntax: "<percentage>";
+  initial-value: 10%;
+  inherits: false;
+}
+
+@property --main-color {
+  syntax: "<color>";
+  initial-value: rgb(23, 23, 23);
+  inherits: false;
+}
 body.regular {
   background-color: rgb(23, 23, 23);
   a.nav-link {
@@ -21,17 +38,25 @@ body.regular {
   }
 }
 
+body.blue-gradient {
+  --gradient-degree: 45deg;
+
+  --main-color: purple;
+}
+
 body.greenish-yellow {
-  background-color: rgb(231, 236, 148);
+  --gradient-degree: 210deg;
+
+  --main-color: rgb(231, 236, 148);
 
   .content {
     p {
-      color: black;
+      //color: black;
     }
   }
 
   a.nav-link {
-    color: black;
+    //color: black;
   }
 }
 
@@ -84,18 +109,18 @@ li > a {
   // animation-duration: 4s;
 }
 
-@keyframes background-test {
-  from {
-    background-position: 100% 100%;
-  }
-  to {
-    background-position: 200% 200%;
-  }
-}
-
 body {
   margin: 0;
-  transition: background-color 1s;
+  background-size: 200px 200px;
+  transition: background-color 1s, background-position 1s, --gradient-degree 1s,
+    --main-color 1s;
+  --gradient-degree: 45deg;
+  background: linear-gradient(
+    var(--gradient-degree),
+    rgba(2, 0, 0, 1) 0%,
+    rgba(9, 9, 0, 1) 27%,
+    var(--main-color) 100%
+  );
 }
 
 // Placeholder styles

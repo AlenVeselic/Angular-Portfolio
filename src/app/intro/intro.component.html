@@ -1,14 +1,21 @@
 <main class="main" style="flex-direction: column">
+  <div class="hero">
+    <div class="inner-hero-wrapper">
+      <div class="inner-hero">
+        <div class="text-wrapper">
+          <div class="top-text">
+            <p class="welcome">Welcome</p>
+            <p class="to d-block w-100">to the website of</p>
+          </div>
+          <p class="name">Alen Veselič</p>
+          <p class="title">Developer of many things</p>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="content">
-    <p>Welcome to Alen Veselič's website.</p>
-    <p>
-      All we've got for you today is his updated CV. Now If we may redirect you
-      to the CV link up there.
-    </p>
-    <p>We're sure the CV will give you a warm welcome.</p>
-    <p>
-      (If you're on mobile, gently tap the hamburger toggle button and the CV
-      button will become apparent)
-    </p>
+    <p>Feel free to have a look around</p>
+    <p>Currently available content</p>
+    <a [routerLink]="['/cv']" routerLinkActive="active"><p>To the CV -></p></a>
   </div>
 </main>
