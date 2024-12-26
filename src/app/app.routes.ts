@@ -28,9 +28,9 @@ export const routes: Routes = [
     data: { animation: 'HomePage', bodyClass: 'greenish-yellow' },
   },
   // { path: 'me', component: MeComponent, data: { animation: 'MePage' } },
-  // {
-  //   path: 'skills',
-  //   component: SkillsComponent,
-  //   data: { animation: 'SkillPage' },
-  // },
+  {
+    path: 'skills',
+    component: SkillsComponent,
+    data: { animation: 'SkillPage', bodyClass: 'skills' },
+  },
 ];

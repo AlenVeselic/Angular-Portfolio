@@ -1,14 +1,69 @@
-<div>
-  <h2>Programming languages</h2>
-  @for(pLanguage of myProgrammingLanguages; track pLanguage){
-  <span>{{ pLanguage }} &nbsp;</span>}
-</div>
-<div>
-  <h2>Technologies</h2>
-  @for(tech of myTechnologies; track tech){ <span>{{ tech }} &nbsp;</span>}
-</div>
-<div>
-  <h2>Skills</h2>
-  @for(skill of mySkills; track skill){<span>{{ skill }}</span
-  >}
+<div style="height: 97vh; width: 100vw; overflow: auto">
+  <div class="d-flex flex-column align-content-end justify-content-center">
+    <img
+      style="height: 200px; width: 200px; align-self: center"
+      src="./toolbox.gif"
+    />
+    <div class="d-flex justify-content-center flex-wrap">
+      <img
+        style="max-height: 100px; max-width: 100px; align-self: end"
+        src="./3dgifmaker41068.gif"
+      />
+      <h1 style="margin: auto 0 auto 0">Skills</h1>
+      <img
+        style="max-height: 100px; max-width: 100px; align-self: end"
+        src="./3dgifmaker41068.gif"
+      />
+    </div>
+  </div>
+  <div class="my-3">
+    <h2>Programming languages</h2>
+    <div class="d-flex flex-row justify-content-center flex-wrap">
+      @for(pLanguage of myProgrammingLanguages; track pLanguage){
+
+      <div class="d-flex flex-column" style="width: min-content">
+        <img style="height: 100px; width: 100px" [src]="pLanguage.icon" />
+        <span>{{ pLanguage.title }} &nbsp;</span>
+      </div>
+
+      }
+    </div>
+  </div>
+  <div class="mb-3">
+    <h2>Technologies</h2>
+    <div class="d-flex flex-row justify-content-center flex-wrap">
+      @for(tech of myTechnologies; track tech){
+      <div class="d-flex flex-column" style="width: min-content">
+        <img
+          *ngIf="tech.icon != null"
+          style="height: 100px; width: 100px"
+          [src]="tech.icon"
+        />
+        <span>{{ tech.title }} &nbsp;</span>
+      </div>
+      }
+    </div>
+  </div>
+
+  <div>
+    <h2>Soft Skills</h2>
+    <div class="d-flex flex-row justify-content-center flex-wrap">
+      @for(skill of mySkills; track skill){
+      <span class="p-2">{{ skill.title }}</span
+      >}
+    </div>
+  </div>
+
+  <div class="mt-5" style="margin-bottom: 300px">
+    <h3>Props for the assets</h3>
+    Icons from <a target="_blank" href="https://icons8.com/">Icons8</a>,
+    <a
+      target="_blank"
+      href="https://www.flaticon.com/free-icons/hammer"
+      title="hammer icons"
+      >Hammer and screwdriver icon created by Freepik - Flaticon</a
+    >, and <a href="https://www.svgrepo.com" target="_blank">SVG Repo</a>. Icon
+    animation made using
+    <a href="https://www.3dgifmaker.com/" target="_blank">3dgifmaker</a>.
+  </div>
 </div>

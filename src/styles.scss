@@ -14,9 +14,9 @@
   inherits: false;
 }
 
-@property --gradien-middle-percentage {
+@property --gradient-middle-percentage {
   syntax: "<percentage>";
-  initial-value: 10%;
+  initial-value: 27%;
   inherits: false;
 }
 
@@ -48,6 +48,24 @@ body.greenish-yellow {
   --gradient-degree: 210deg;
 
   --main-color: rgb(231, 236, 148);
+
+  .content {
+    p {
+      //color: black;
+    }
+  }
+
+  a.nav-link {
+    //color: black;
+  }
+}
+
+body.skills {
+  overflow: hidden;
+  --gradient-degree: 180deg;
+  --gradient-middle-percentage: 56%;
+
+  --main-color: rgb(153, 8, 8);
 
   .content {
     p {
@@ -118,7 +136,7 @@ body {
   background: linear-gradient(
     var(--gradient-degree),
     rgba(2, 0, 0, 1) 0%,
-    rgba(9, 9, 0, 1) 27%,
+    rgba(9, 9, 0, 1) var(--gradient-middle-percentage),
     var(--main-color) 100%
   );
 }
