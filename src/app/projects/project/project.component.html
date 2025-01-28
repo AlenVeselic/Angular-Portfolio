@@ -1,0 +1,11 @@
+<div class="d-flex flex-column border border-1 p-2">
+  <p class="m-0 fw-bold">{{ project.title }}</p>
+  <p class="m-0 text-break">
+    {{ project.summary }}
+  </p>
+  <div class="d-flex gap-2">
+    @for(tag of project.tags; track tag){
+    <div style="border-radius: 200px" class="border p-1">{{ tag }}</div>
+    }
+  </div>
+</div>
