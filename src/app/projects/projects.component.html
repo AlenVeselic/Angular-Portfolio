@@ -1,0 +1,19 @@
+<div class="d-flex" style="color-scheme: dark">
+  <div class="d-flex flex-column">
+    <div class="w-100 d-flex justify-content-center">
+      <h2>Projects</h2>
+    </div>
+    <div
+      class="overflow-auto d-flex justify-content-center"
+      style="max-height: 92vh; width: 100vw"
+    >
+      <div
+        class="d-flex flex-row flex-wrap gap-2"
+        style="width: 65%; height: 100%"
+      >
+        @for(item of projectArray; track item){
+        <app-project style="width: 19%" [project]="item"></app-project>}
+      </div>
+    </div>
+  </div>
+</div>
