@@ -6,6 +6,7 @@ import { CvZoneComponent } from './cv-zone/cv-zone.component';
 import { MeComponent } from './me/me.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 export const routes: Routes = [
   {
@@ -32,5 +33,10 @@ export const routes: Routes = [
     path: 'skills',
     component: SkillsComponent,
     data: { animation: 'SkillPage', bodyClass: 'skills' },
+  },
+  {
+    path: 'projects',
+    component: ProjectsComponent,
+    data: { animation: 'HomePage', bodyClass: 'projects' },
   },
 ];

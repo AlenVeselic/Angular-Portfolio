@@ -78,6 +78,24 @@ body.skills {
   }
 }
 
+body.projects {
+  overflow: hidden;
+  --gradient-degree: 65deg;
+  --gradient-middle-percentage: 24%;
+
+  --main-color: rgb(1, 115, 16);
+
+  .content {
+    p {
+      //color: black;
+    }
+  }
+
+  a.nav-link {
+    //color: black;
+  }
+}
+
 .navbar-toggler {
   background-color: #00000046;
 }
@@ -131,7 +149,7 @@ body {
   margin: 0;
   background-size: 200px 200px;
   transition: background-color 1s, background-position 1s, --gradient-degree 1s,
-    --main-color 1s;
+    --main-color 1s, --gradient-middle-percentage 1s;
   --gradient-degree: 45deg;
   background: linear-gradient(
     var(--gradient-degree),
