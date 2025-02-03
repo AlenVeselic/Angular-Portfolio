@@ -12,7 +12,7 @@ export const routes: Routes = [
     path: '',
     component: IntroComponent,
     data: {
-      animation: 'HomePage',
+      animation: '',
       bodyClass: 'blue-gradient',
       CVLinkClass: 'expose',
     },
@@ -25,12 +25,12 @@ export const routes: Routes = [
   {
     path: 'cv',
     component: CvZoneComponent,
-    data: { animation: 'HomePage', bodyClass: 'greenish-yellow' },
+    data: { animation: '', bodyClass: 'greenish-yellow' },
   },
   // { path: 'me', component: MeComponent, data: { animation: 'MePage' } },
   {
     path: 'skills',
     component: SkillsComponent,
-    data: { animation: 'SkillPage', bodyClass: 'skills' },
+    data: { animation: '', bodyClass: 'skills' },
   },
 ];
