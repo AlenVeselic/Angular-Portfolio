@@ -10,4 +10,5 @@ import { Component, Input, input } from '@angular/core';
 })
 export class ProjectComponent {
   @Input() project: any;
+  @Input() showSummary: boolean = true;
 }

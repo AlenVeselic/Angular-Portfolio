@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProjectComponent } from './project/project.component';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 interface Project {
   title: string;
@@ -14,11 +15,12 @@ interface Project {
   selector: 'app-projects',
   standalone: true,
   templateUrl: './projects.component.html',
-  imports: [ProjectComponent, CommonModule],
+  imports: [ProjectComponent, CommonModule, FormsModule],
 
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
+  public showSummary = true;
   public projectArray: Project[] = [
     {
       title: 'Solar Calculator website',
@@ -37,6 +39,7 @@ export class ProjectsComponent {
         'Angular',
         'Raspberry PI',
         'Docker',
+        'PHP',
       ],
       personal: true,
     },
@@ -63,7 +66,15 @@ export class ProjectsComponent {
       title: 'Booking Platform',
       summary:
         'Platform that provides a storefront page for customers to make bookings as well as provide the website owner the option to prepare marketing material for their offers and import offer data from external systems like Unitur, Traffics and Phobs.',
-      tags: ['ArangoDB', 'NodeJs', 'Angular', 'Wordpress', 'AWS', 'Java'],
+      tags: [
+        'ArangoDB',
+        'NodeJs',
+        'Angular',
+        'Wordpress',
+        'AWS',
+        'Java',
+        'PHP',
+      ],
       personal: false,
       company: 'U-Centrix',
     },
@@ -151,6 +162,30 @@ export class ProjectsComponent {
         'A .NET application that uses Keycloak for authentication. The application was as a demonstration of what Keycloak is and how to use Keycloak with .NET applications.',
       tags: ['.NET', 'Keycloak'],
       personal: true,
+    },
+    {
+      title: 'Stock Management API',
+      summary:
+        "An API that works as a wrapper for another system's API. The API provides a way to get stock data from the other system and update the stock data in the other system. Implemented using the TMForum Open API standard.",
+      tags: ['C#', '.NET', 'TMForum Open API'],
+      personal: false,
+      company: 'U-Centrix',
+    },
+    {
+      title: 'Resource Pool Management API',
+      summary:
+        "An API that works as a wrapper for another system's API. The API provides a way to get resource data from the other system and update the resource data in the other system. Implemented using the TMForum Open API standard.",
+      tags: ['C#', '.NET', 'TMForum Open API'],
+      personal: false,
+      company: 'U-Centrix',
+    },
+    {
+      title: "NuGet package that allows a C# API to OAuth with Keycloak's API",
+      summary:
+        "The package provides a way to configure a .NET API to authenticate using an instance of Keycloak. Main purpose of the package was to be able to unmap the roles from Keycloak's JWT and get them from the Userinfo endpoint then map them onto C#'s identity object to use them in the application in case tokens are too big.",
+      tags: ['C#', '.NET', 'Keycloak'],
+      personal: false,
+      company: 'U-Centrix',
     },
   ];
 

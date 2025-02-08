@@ -3,6 +3,12 @@
     <div class="w-100 d-flex justify-content-center">
       <h2>Projects</h2>
     </div>
+    <!-- <div>
+      <label for="showSummary"
+        ><input [(ngModel)]="showSummary" type="checkbox" /> Show
+        Summaries</label
+      >
+    </div> -->
     <div
       class="overflow-auto d-flex justify-content-center"
       style="max-height: 92vh; width: 100vw"
@@ -26,7 +32,11 @@
           }
         </div>
         @for(item of filteredProjects; track item){
-        <app-project class="project" [project]="item"></app-project>
+        <app-project
+          class="project"
+          [project]="item"
+          [showSummary]="showSummary"
+        ></app-project>
         }
         <div class="w-100 h-25"></div>
       </div>
