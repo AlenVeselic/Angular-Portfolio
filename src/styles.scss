@@ -598,3 +598,17 @@ $duration: 20s;
   font-weight: 100;
   font-style: normal;
 }
+
+.project {
+  width: 100%;
+
+  min-width: 119px;
+
+  @media (min-width: 900px) {
+    width: 32%;
+  }
+
+  @media (min-width: 1500px) {
+    width: 19%;
+  }
+}

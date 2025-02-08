@@ -11,8 +11,17 @@
         class="d-flex flex-row flex-wrap gap-2"
         style="width: 65%; height: 100%"
       >
+        <div class="d-flex flex-wrap gap-2 w-100">
+          @for(tag of allTags; track tag){
+          <div style="border-radius: 200px" class="border p-1 word-break">
+            {{ tag }}
+          </div>
+          }
+        </div>
         @for(item of projectArray; track item){
-        <app-project style="min-width: 119px; width: 19%" [project]="item"></app-project>}
+        <app-project class="project" [project]="item"></app-project>
+        }
+        <div class="w-100 h-25"></div>
       </div>
     </div>
   </div>

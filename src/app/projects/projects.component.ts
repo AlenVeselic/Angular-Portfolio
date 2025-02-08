@@ -101,14 +101,24 @@ export class ProjectsComponent {
       tags: ['ACF', 'E-Commerce', 'PHP', 'Wordpress Plugins', 'E-Računi'],
       personal: false,
       company: 'U-Centrix',
-    }
-    ,
+    },
     {
       title: 'Logistics Company Cargo delivery tracking system',
-      summary: 'A system that allows managers to track the delivery of cargo, assign drivers to deliveries and track the progress of the delivery. This app also included a mobile app that allowed the drivers to see their assigned deliveries and update the status of the delivery.',
+      summary:
+        'A system that allows managers to track the delivery of cargo, assign drivers to deliveries and track the progress of the delivery. This app also included a mobile app that allowed the drivers to see their assigned deliveries and update the status of the delivery.',
       tags: ['NodeJs', 'Angular', 'Potgres'],
       personal: false,
-      company: "U-Centrix"
-    }
+      company: 'U-Centrix',
+    },
+    {
+      title: 'Insurance Damage Assessment AI analysis API',
+      summary:
+        'An application that uses documents and photos from an agent or client to generate an analysis for the damages. The application was built in a way that the AI models could easily be swapped out, should there be a need for it.',
+      tags: ['C#', '.NET', 'ChatGPT'],
+      personal: false,
+      company: 'U-Centrix',
+    },
   ];
+
+  allTags = new Set(this.projectArray.map((project) => project.tags).flat(1));
 }
