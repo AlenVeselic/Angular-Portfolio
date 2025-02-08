@@ -120,5 +120,28 @@ export class ProjectsComponent {
     },
   ];
 
+  filteredProjects = this.projectArray;
+
   allTags = new Set(this.projectArray.map((project) => project.tags).flat(1));
+  selectedTags: any[] = [];
+
+  filterProjects(tag: string) {
+    if (this.selectedTags.includes(tag)) {
+      this.selectedTags.splice(this.selectedTags.indexOf(tag), 1);
+    } else {
+      this.selectedTags.push(tag);
+    }
+    this.filteredProjects = this.projectArray.filter((project) => {
+      const matchesAllTags = this.selectedTags.every((tag) =>
+        project.tags.includes(tag)
+      );
+      if (this.selectedTags.length === 0) {
+        return true;
+      }
+      if (matchesAllTags) {
+        return true;
+      }
+      return false;
+    });
+  }
 }

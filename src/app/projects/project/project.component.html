@@ -1,15 +1,21 @@
 <div class="d-flex flex-column border border-1 p-2 h-100">
   <div class="mb-auto">
-
+    <div class="d-flex">
+      <span class="align-self-start fst-italic">
+        @if(project.company){At {{ project.company }}} @else { Personal project
+        }
+      </span>
+    </div>
     <p class="m-0 fw-bold">{{ project.title }}</p>
-    @if(project.company){<span class="fst-italic"> {{project.company}}</span>}
     <p class="m-0 text-break">
       {{ project.summary }}
     </p>
   </div>
-    <div class="d-flex justify-self-end gap-2 flex-wrap">
-      @for(tag of project.tags; track tag){
-        <div style="border-radius: 200px" class="border p-1 word-break">{{ tag }}</div>
+  <div class="d-flex justify-self-end gap-2 flex-wrap">
+    @for(tag of project.tags; track tag){
+    <div style="border-radius: 200px" class="border p-1 word-break">
+      {{ tag }}
+    </div>
     }
   </div>
 </div>

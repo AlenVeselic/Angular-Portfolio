@@ -13,12 +13,19 @@
       >
         <div class="d-flex flex-wrap gap-2 w-100">
           @for(tag of allTags; track tag){
-          <div style="border-radius: 200px" class="border p-1 word-break">
+          <div
+            (click)="filterProjects(tag)"
+            style="border-radius: 200px"
+            [ngClass]="{
+              'fw-bold': selectedTags.includes(tag),
+            }"
+            class="border p-1 word-break"
+          >
             {{ tag }}
           </div>
           }
         </div>
-        @for(item of projectArray; track item){
+        @for(item of filteredProjects; track item){
         <app-project class="project" [project]="item"></app-project>
         }
         <div class="w-100 h-25"></div>
