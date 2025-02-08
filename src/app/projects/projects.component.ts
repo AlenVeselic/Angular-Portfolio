@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ProjectComponent } from './project/project.component';
-import { CommonModule, NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 interface Project {
   title: string;
@@ -14,7 +14,7 @@ interface Project {
   selector: 'app-projects',
   standalone: true,
   templateUrl: './projects.component.html',
-  imports: [ProjectComponent, NgFor, CommonModule],
+  imports: [ProjectComponent, CommonModule],
 
   styleUrl: './projects.component.scss',
 })
@@ -23,24 +23,26 @@ export class ProjectsComponent {
     {
       title: 'Solar Calculator website',
       summary:
-        "A website that calculates the solar calculations based on the user's location and changes how the background animation works based on the time of day.",
+        "A website that calculates solar calculations based on the user's location and changes how the background animation works based on the user's time of day.",
       tags: ['Vue', 'Tailwind'],
       personal: true,
     },
     {
       title: 'Recipe browser',
-      summary: `An app that scrapes the web for recipes. Aggregates them in a database. Has CRUD api made in Laravel.
-    Uses that api to display that data on an Angular Frontend`,
-      tags: ['Laravel', 'Python', 'Angular'],
+      summary: `A full stack app that uses a python script to scrape a third party API for recipes. Populates them in a database. Has a CRUD api made in Laravel and uses that api\'s to display that data on an Angular Frontend. The api also provides in depth search functionality. Here I tried Laravel and hosting a website on a Raspberry PI using docker compose for the first time.`,
+      tags: [
+        'Laravel',
+        'Postgres',
+        'Python',
+        'Angular',
+        'Raspberry PI',
+        'Docker',
+      ],
       personal: true,
     },
     {
       title: 'Content scraping and filtering software',
-      summary: `PyQT app that can scrape booru sites and reddit feeds, allowing
-      the user to also choose a destination folder on their device.
-      This software then allows the user to filter the content, by providing the ability
-      to view the content as well as choosing a destination for content that has been accepted or
-      delete it.`,
+      summary: `Multi purpose PyQT program: One half of the app is a configurable web scraper that can scrape a booru site(from the tags the user sets) or a personal reddit feed or both. The other half has an integrated gallery and media viewer that allows the user to sort and filter the media they have scraped.`,
       tags: ['PyQT', 'Python', 'BeautifulSoup'],
       personal: true,
     },
@@ -60,37 +62,38 @@ export class ProjectsComponent {
     {
       title: 'Booking Platform',
       summary:
-        'Platform that provides a storefront page for customers to make bookings as well as provide the website owner the opportunity to prepare marketing material for the offers and import offer data from external systems like Unitur, Traffics and Phobs.',
+        'Platform that provides a storefront page for customers to make bookings as well as provide the website owner the option to prepare marketing material for their offers and import offer data from external systems like Unitur, Traffics and Phobs.',
       tags: ['ArangoDB', 'NodeJs', 'Angular', 'Wordpress', 'AWS', 'Java'],
       personal: false,
       company: 'U-Centrix',
     },
     {
-      title: 'Insurance damage assessment platform',
+      title:
+        'Remote video call damage assessment platform for insurance companies',
       summary:
-        "A platform that allows agents to manage reports, accept video calls from customers and take pictures of the damage. The platform also provides a way to generate reports and send them to the agent's email, download it or export to a third party system.",
-      tags: ['NodeJs', 'Angular', 'AWS', 'PWA'],
+        "A platform that allows agents from insurance companies to manage reports, accept video calls from customers and assess damages remotely. The platform also provides a way to generate reports and send them to an agent's email, download it or export to a third party system.",
+      tags: ['NodeJs', 'Angular', 'AWS', 'PWA', 'Keycloak', 'WebRTC'],
       personal: false,
       company: 'U-Centrix',
     },
     {
       title: 'Meal plan generator',
       summary:
-        "An app that generates meal plans based on the user's favorite foods and daily time constraints",
+        "An app that generates meal plans based on the user's favorite foods and daily time constraints.",
       tags: ['Python', 'TKInter', 'Shelf'],
       personal: true,
     },
     {
       title: 'Moje Delo NodeJS Web Scraper',
       summary:
-        'Practice project that received query information from the website Moje Delo and returned key information from the backend as a response.',
+        'Practice NodeJS API that scrapes the Moje Delo website for job listings and returns them in a JSON format. The API uses a Python script that scrapes the website and returns the data to the NodeJS API.',
       tags: ['Python', 'BeautifulSoup', 'NodeJS'],
       personal: true,
     },
     {
       title: 'Finance tracking website',
       summary:
-        'A website made using vanilla JS, that allows the user to track their daily finances and categorize them. The app also provided the ability to check a calendar view where days were painted by the dominant spending category of that day. Storage handled with LocalStorage.',
+        'A website made using vanilla JS, that allows the user to track their daily finances and categorize them. The app also provides the ability to check a calendar view where days are painted by the dominant spending category of that day. Storage handled with LocalStorage.',
       tags: ['JavaScript', 'HTML', 'CSS'],
       personal: true,
     },
@@ -106,7 +109,7 @@ export class ProjectsComponent {
       title: 'Logistics Company Cargo delivery tracking system',
       summary:
         'A system that allows managers to track the delivery of cargo, assign drivers to deliveries and track the progress of the delivery. This app also included a mobile app that allowed the drivers to see their assigned deliveries and update the status of the delivery.',
-      tags: ['NodeJs', 'Angular', 'Potgres'],
+      tags: ['NodeJs', 'Angular', 'Potgres', 'Keycloak'],
       personal: false,
       company: 'U-Centrix',
     },
@@ -117,6 +120,37 @@ export class ProjectsComponent {
       tags: ['C#', '.NET', 'ChatGPT'],
       personal: false,
       company: 'U-Centrix',
+    },
+    {
+      title:
+        'Mobile app for video game players to match up, chat and bet who will win',
+      summary:
+        'An app that allowed users to match up with other players, chat with them and bet on who will win the match. The app also provided making friends, chatting outside of matches and a way to check player stats. There was also an Angular website tied to it that allowed users to see their stats and matches. The users would submit their match results through the mobile app and the results would be judged using OCR.',
+      tags: ['NodeJs', 'Angular', 'Kotlin', 'OCR'],
+      personal: false,
+      company: 'U-Centrix',
+    },
+    {
+      title:
+        'Python script that generates a Google Sheet along with spreadsheets',
+      summary:
+        'A script that generates a Google Sheet from a programmed template. This was more of a practice project to further cement the knowledge about Google\'s Google Drive and Google Sheets APIs learned from the "Automate the basic stuff" Book.',
+      tags: ['Python', 'Google Sheets API', 'Google Drive API'],
+      personal: true,
+    },
+    {
+      title: 'Automate the Boring Stuff - Exercises and Projects',
+      summary:
+        'Going through the book "Automate the Boring Stuff with Python" and doing the exercises and projects from the book. This book helped me reinvigorate my love for programming and helped me learn a lot of new things including Python.',
+      tags: ['Python', 'Automation', 'Web Scraping'],
+      personal: true,
+    },
+    {
+      title: '.NET Application with Keycloak authentication',
+      summary:
+        'A .NET application that uses Keycloak for authentication. The application was as a demonstration of what Keycloak is and how to use Keycloak with .NET applications.',
+      tags: ['.NET', 'Keycloak'],
+      personal: true,
     },
   ];
 
