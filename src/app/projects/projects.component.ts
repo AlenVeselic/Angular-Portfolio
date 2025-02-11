@@ -117,7 +117,7 @@ export class ProjectsComponent {
       company: 'U-Centrix',
     },
     {
-      title: 'Logistics Company Cargo delivery tracking system',
+      title: 'Logistics Company Cargo delivery management system',
       summary:
         'A system that allows managers to track the delivery of cargo, assign drivers to deliveries and track the progress of the delivery. This app also included a mobile app that allowed the drivers to see their assigned deliveries and update the status of the delivery.',
       tags: ['NodeJs', 'Angular', 'Potgres', 'Keycloak'],
