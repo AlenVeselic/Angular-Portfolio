@@ -189,6 +189,9 @@ export class ProjectsComponent {
     },
   ];
 
+  // Add clerk location project
+  // Add subproject navigation assembling project
+
   filteredProjects = this.projectArray;
 
   allTags = new Set(this.projectArray.map((project) => project.tags).flat(1));
