@@ -11,21 +11,22 @@
     </div> -->
     <div
       class="overflow-auto d-flex justify-content-center"
-      style="max-height: 92vh; width: 100vw; min-height: fit-content;"
+      style="max-height: 92vh; width: 100vw; min-height: 30vh"
     >
       <div
         class="d-flex flex-row flex-wrap gap-2"
         style="width: 65%; height: 100%"
       >
-        <div class="d-flex flex-wrap gap-2 w-100">
+        <div class="d-flex flex-wrap gap-2 w-100 align-content-start">
           @for(tag of allTags; track tag){
           <div
             (click)="filterProjects(tag)"
-            style="border-radius: 200px"
+            style="border-radius: 200px; max-height: fit-content;"
             [ngClass]="{
               'fw-bold': selectedTags.includes(tag),
             }"
             class="border p-1 word-break"
+
           >
             {{ tag }}
           </div>
