@@ -55,7 +55,7 @@ export class AppComponent implements OnInit {
       .pipe(mergeMap((route) => route.data))
       .subscribe((event) => {
         this.updateBodyClass(event['bodyClass']);
-        this.updateCVLinkClass(event['CVLinkClass']);
+        //this.updateCVLinkClass(event['CVLinkClass']);
       });
   }
 
