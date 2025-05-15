@@ -25,8 +25,8 @@ export class ProjectsComponent {
     {
       title: 'Solar Calculator website',
       summary:
-        "A website that calculates solar calculations based on the user's location and changes the background animation based on the user's time of day. Different vibes for sunset, sunrise, daytime and nighttime.",
-      tags: ['Vue', 'Tailwind'],
+        "A website that calculates solar calculations based on the user's location and changes the background animation based on the user's time of day. Different vibes for sunset, sunrise, daytime and nighttime. Keeps track of local weather and available bike rentals and displays appropriate warnings for them. Can also generate a solar calculation table for the next 30 days.",
+      tags: ['Vue', 'Tailwind', 'JavaScript'],
       personal: true,
     },
     {
@@ -91,7 +91,7 @@ export class ProjectsComponent {
       title: 'Meal plan generator',
       summary:
         "An app that generates meal plans based on the user's favorite foods and daily time constraints.",
-      tags: ['Python', 'TKInter', 'Shelve', "ttkbootstrap"],
+      tags: ['Python', 'TKInter', 'Shelve', 'ttkbootstrap'],
       personal: true,
     },
     {
@@ -188,15 +188,15 @@ export class ProjectsComponent {
       company: 'U-Centrix',
     },
     {
-      title: "Retailer store location assignment and check in CRM Upgrade",
+      title: 'Retailer store location assignment and check in CRM Upgrade',
       summary:
-        "CRM solution that allows managers to assign/reassign retail workers to locations that they can operate from. Retail workers are then prmopted with their assigned locations upon logging into the system and can chose where they are currently working from. This system also allows managers to set promotional bussiness logic for their locations.",
-      tags: ['C#', '.NET', 'Angular', "Velzon", "Bootstrap 5" ],
+        'CRM solution that allows managers to assign/reassign retail workers to locations that they can operate from. Retail workers are then prmopted with their assigned locations upon logging into the system and can chose where they are currently working from. This system also allows managers to set promotional bussiness logic for their locations.',
+      tags: ['C#', '.NET', 'Angular', 'Velzon', 'Bootstrap 5'],
       personal: false,
       company: 'U-Centrix',
     },
     {
-      title: "Dashboard navigation management CRM upgrade - API",
+      title: 'Dashboard navigation management CRM upgrade - API',
       summary:
         "Administrator facing - a dynamic system for creation and altering dashborad navigation on the main CRM, essentially enabling the ability to link embedded applications to it with new routes and  setting authorisation rights for said routes. Regular user facing - dynamic menu system, that based on the user's permissions generates a navigation strictly for them.",
       tags: ['C#', '.NET'],
@@ -204,9 +204,9 @@ export class ProjectsComponent {
       company: 'U-Centrix',
     },
     {
-      title: "DORA Report system and export",
+      title: 'DORA Report system and export',
       summary:
-        "Application that provides a more clear view of the necessary data needed for a DORA Report. This included the implementation of validation the input data as well as collecting it all in an export function and exporting it in the standard zip format.",
+        'Application that provides a more clear view of the necessary data needed for a DORA Report. This included the implementation of validation the input data as well as collecting it all in an export function and exporting it in the standard zip format.',
       tags: ['ZOHO', 'Deluge'],
       personal: false,
       company: 'U-Centrix',
