@@ -17,18 +17,20 @@
         class="d-flex flex-row flex-wrap gap-2"
         style="width: 65%; height: 100%"
       >
-        <div class="d-flex flex-wrap gap-2 w-100 align-content-start">
+        <div class="d-flex flex-wrap gap-1 w-100 align-content-start">
           @for(tag of allTags; track tag){
           <div
             (click)="filterProjects(tag)"
-            style="border-radius: 200px; max-height: fit-content; cursor:pointer"
+            style="
+              border-radius: 200px;
+              max-height: fit-content;
+              cursor: pointer;
+            "
             [ngClass]="{
               'fw-bold': selectedTags.includes(tag),
               'border-2': selectedTags.includes(tag)
-              
             }"
-            class="border p-1 word-break"
-
+            class="border px-2 py-1 word-break"
           >
             {{ tag }}
           </div>
