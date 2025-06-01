@@ -7,6 +7,7 @@ import { MeComponent } from './me/me.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ContactComponent } from './contact/contact.component';
 
 export const routes: Routes = [
   {
@@ -18,11 +19,16 @@ export const routes: Routes = [
       CVLinkClass: 'expose',
     },
   },
-  // {
-  //   path: 'about',
-  //   component: AboutComponent,
-  //   data: { animation: 'AboutPage' },
-  // },
+  {
+    path: 'about',
+    component: AboutComponent,
+    data: { animation: 'AboutPage' },
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    data: { animation: 'ContactPage' },
+  },
   {
     path: 'cv',
     component: CvZoneComponent,
